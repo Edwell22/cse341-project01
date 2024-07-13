@@ -1,0 +1,54 @@
+# Local Host------------------------------------------------------
+
+GET http://localhost:3000/contacts/
+# gets the local database api data
+
+###
+
+GET http://http://localhost:3000/contacts/6692460127efc0b6accfabb9
+# gets the local api data for a single contact
+
+
+###
+
+# Create Contact
+POST http://localhost:3000/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Eckson",
+    "lastName": "Kakunguwo",
+    "email": "ecksonkakunguwo@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "9/25/1976"    
+}
+
+###
+
+# Put Contact
+PUT http://localhost:3000/contacts/669152eb541e6a6ffd1ddeba HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Edward",
+    "lastName": "Kakunguwo",
+    "email": "edwardkakunguwo@email.com",
+    "favoriteColor": "red",
+    "birthday": "8/18/2012"    
+}
+
+###
+
+# Delete Contact
+DELETE http://localhost:3000/contacts/669166c1541e6a6ffd1ddebc HTTP/1.1
+
+
+# Render Site ------------------------------------------------------
+###
+GET https://cse341-project01-rx0v.onrender.com/contacts
+# gets the deployed API data
+
+###
+
+GET https://cse341-project01-rx0v.onrender.com/contacts/669152eb541e6a6ffd1ddeba
+# gets the deployed API data for a single contact
